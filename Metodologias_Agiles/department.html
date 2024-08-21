@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Departamentos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="./images/UAM.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/departmentView.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav_logo">
+                <h2 class="nav_title">Sección de Departamentos</h2>
+            </div>
+
+            <ul class="nav_link">
+                <li class="nav_items">
+                    <a href="./index.html" class="nav_links">Productos</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Departamentos</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Asignaciones</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Precios</a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Elige una opción: </h1>
+            <a href="#" class="cta" id="altaDepartamento"><span>Alta de departamento</span></a>
+            <a href="#" class="cta" id="consultarDepartamento"><span>Consultar departamentos</span></a>
+            <a href="#" class="cta" id="bajaDepartamento"><span>Baja de departamento</span></a>
+            <a href="#" class="cta" id="asignarProducto"><span>Asignar producto a departamento</span></a>
+            <a href="./index.html" class="cta" id="btnRegresar">Regresar</a>
+
+            <form id="addDepartmentForm" class="hidden">
+                <label class="labelDepartment_Input" for="departmentKey">Clave:</label>
+                <input type="text" class="departmentInput" id="departmentKey" placeholder="Clave del departamento" required>
+                
+                <label class="labelDepartment_Input" for="departmentName">Nombre:</label>
+                <input type="text" class="departmentInput" id="departmentName" placeholder="Nombre del departamento" required>
+
+                <label class="labelDepartment_Input" for="departmentHead">Responsable:</label>
+                <input type="text" class="departmentInput" id="departmentHead" placeholder="Responsable del departamento" required>
+                
+                <button type="submit">Agregar Departamento</button>
+            </form>
+        
+            <form id="deleteDepartmentForm" class="hidden">
+                <input type="text" id="departmentKeyToDelete" placeholder="Clave del departamento" required>
+                <button type="submit">Eliminar Departamento</button>
+            </form>
+
+            <form id="assignProductForm" class="hidden">
+                <h3>Asignar Producto a Departamento</h3>
+                <label for="productId">ID del Producto:</label>
+                <input type="text" id="productId" required><br>
+                <label for="departmentKeyassign">Clave del Departamento:</label>
+                <input type="text" id="departmentKeyassign" required><br>
+                <button type="submit">Asignar</button>
+            </form>
+            
+
+            <div id="departmentList" class="hidden"></div>
+        </section>
+    </header>
+    <script src="./js/department.js"></script>
+</body>
+</html>
+

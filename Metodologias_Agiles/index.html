@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Super Mercado UAM</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="./images/UAM.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/mainStyle.css">
+
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav_logo">
+                <h2 class="nav_title">Productos</h2>
+            </div>
+
+            <ul class="nav_link">
+                <li class="nav_items">
+                    <a href="./index.html" class="nav_links">Productos</a>
+                </li>
+                <li class="nav_items">
+                    <a href="./department.html" class="nav_links">Departamentos</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Asignaciones</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Precios</a>
+                </li>
+                <img src="./images/close.svg" alt="img" class="nav_close">
+            </ul>
+
+            <div class="nav_menu">
+                <img src="./images/menu.svg" class="nav_img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Elige una opción: </h1>
+            <a href="#" class="cta" id="showFormButton"><span>Agregar producto</span> </a>
+            <a href="#" class="cta" id="showProductsButton">Consultar productos</a>
+            <a href="#" class="cta" id="showDeleteFormButton">Borrar producto</a>
+        </section>
+
+    </header>
+
+    <main>
+        <form id="productForm" class="hidden">
+            <label for="productName">Producto:</label>
+            <input type="text" class="productsInput" id="productName" name="productName" required placeholder="Ingresa el nombre del producto"><br>
+
+            <label for="productPrice">Precio:</label>
+            <input type="number" class="productsInput" id="productPrice" name="productPrice" required><br>
+
+            <label for="productStock">Existencia:</label>
+            <input type="number" class="productsInput" id="productStock" name="productStock" required><br>
+
+            <label for="productSupplier">Proveedor:</label>
+            <input type="text" class="productsInput" id="productSupplier" name="Proveedor" required>
+            
+            <button type="submit">Enviar</button>
+        </form>
+
+        <form id="deleteForm" class="hidden">
+            <input type="number" id="productId" placeholder="ID del producto" required>
+            <button type="submit">Borrar</button>
+        </form>
+
+        <div id="productList" class="hidden">
+            <h2>Lista de productos</h2>
+            <ul id="productItems"></ul>
+        </div>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
